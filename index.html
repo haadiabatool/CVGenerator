@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ===============FORM=============== -->
+
+    <div class="formContainer">
+    <h2>Enter your Information to create Your CV</h2>
+
+    <form id="cvForm">
+        <!--  Name Input  -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <!-- Contact Input -->
+        <!-- <label for="contact">Contact:</label><br>
+        <input type="text" id="contact" name="contact" placeholder="Enter your contact" required>
+        <br><br> -->
+
+        <!-- About Me -->
+        <label for="about">About Me:</label>
+        <br>
+        <textarea id="about" name="about" placeholder="Write something about yourself..." rows="3" cols="59"
+            required></textarea>
+        <br><br>
+
+        <!-- Skills Input -->
+        <label for="skills">Skills:</label><br>
+        <textarea id="skills" name="skills" placeholder="Enter your skills" rows="4" cols="59" required></textarea>
+        <br><br>
+
+        <!-- Education -->
+        <label for="education">Education:</label>
+        <br>
+        <textarea id="education" name="education" placeholder="Enter your education details..." rows="3" cols="59"
+            required></textarea>
+        <br><br>
+
+        <!-- Experience -->
+        <label for="experience">Experience:</label>
+        <br>
+        <textarea id="experience" name="experience" placeholder="Enter your work experience..." rows="4" cols="59"
+            required></textarea>
+        <br><br>
+
+        <!-- Languages -->
+        <label for="languages">Languages:</label>
+        <input type="text" id="languages" name="languages" placeholder="Enter languages" required>
+        <br><br>
+
+        <!-- Contact Section -->
+        <div class="contactContainer">
+            <div class="contactHeader" onclick="toggleContact()">Contact Information</div>
+            <div id="contactDetails">
+                <!-- Phone Number -->
+                <label for="number">Phone:</label>
+                <input type="tel" id="number" placeholder="Enter your phone number" required>
+                <br><br>
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <br><br>
+
+                <!-- Address -->
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="Enter your address" rows="2" cols="59"
+                    required></textarea>
+                <br><br>
+            </div>
+        </div>
+
+        <!-- Picture Upload -->
+        <label for="picture">Upload Picture:</label>
+        <input type="file" id="picture" name="picture" accept="image/*" required>
+        <br><br>
+
+        <button type="submit">Generate CV</button>
+    </form>
+    </div>
+
+
+
+    <!-- =====CV ====== -->
+     <div class="cvContainer" id="cvTemplate">
+     <div class="cv-content">
+
+    <!-- Left Side -->
+    <div class="left-section">
+        <img id="cvImage" class="profileImage" src="">
+        <h2 id="cvName"></h2>
+
+        <div class="section">
+            <h3>Contact</h3>
+            <ul>
+            <li id="cvPhone"></li>
+            <li id="cvEmail"></li>
+            <li id="cvAddress"></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Languages</h3>
+            <ul id="cvLanguages"></ul>
+        </div>
+
+        
+        
+        <div class="section">
+        <h2>Skills</h2>
+            <ul id="cvSkills"></ul>
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+<div class="right-section">
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p id="cvAbout"></p>
+    </div>
+
+    <div class="section">
+        <h2>Work Experience</h2>
+        <p id="cvExperience"></p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <p id="cvEducation"> </p>
+    </div>
+
+    <!-- <div class="section">
+            <h3>Hobbies</h3>
+            <ul id="cvHobbies"></ul>
+        </div> -->
+    
+</div>
+
+</div>
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>
