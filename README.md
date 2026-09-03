@@ -35,8 +35,8 @@ CV-Generator/<br>
 └── README.md<br>
 
 ## Project ScreenShots
-![CV Generator]("\CV-generator-image-1")
-![CV Generator]("\CV-generator-image-2")
+![CV Generator](CV-generator-image-2.jpeg)<br>
+![CV Generator](CV-generator-image-1.jpeg)
 
 ##👩‍💻 Author<br>
 HAADIA BATOOL
