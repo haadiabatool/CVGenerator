@@ -1,198 +1,283 @@
 /* General body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #97a6bd;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(219, 223, 233, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(196, 201, 212, 0.4) 0px, transparent 50%);
     margin: 0;
-    padding: 0;
+    padding: 40px 20px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
-/* ===============FORM=================== */
-/* Form container */
-form {
-    background: #d4dbec;
-    padding: 40px 60px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+/* =============== FORM CONTAINER =============== */
+
+.formContainer {
     width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-/* Form title */
-h2 {
+.formContainer > h2 {
     text-align: center;
-    color: #131212;
-    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
 }
 
-/* Labels */
+form {
+    background: #ffffff;
+    padding: 40px 45px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    box-sizing: border-box;
+}
+
 label {
-    font-weight: bold;
+    font-weight: 600;
     display: block;
-    color: #0a0a0a;
+    color: #1e293b;
+    margin-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
-/* Inputs and textareas */
 input[type="text"],
 input[type="file"],
-input[type='email'],
-input[type='tel'],
+input[type="email"],
+input[type="tel"],
 textarea {
     width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
+    padding: 12px 16px;
+    margin-bottom: 22px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
     font-size: 15px;
-    resize: none; /* Prevent resizing for textarea */
+    color: #0f172a;
+    background-color: #f8fafc;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    resize: vertical;
 }
-input,textarea{
-    box-shadow:10px 10px 10px  black;
+
+input[type="file"] {
+    padding: 9px 12px;
+    background-color: #f1f5f9;
+    cursor: pointer;
 }
-/* Input focus effect */
+
 input:focus,
 textarea:focus {
-    border-color: #156abe;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    border-color: #0f172a;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.15);
     outline: none;
 }
 
-/* Button styling */
-button {
+.contactContainer {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    border: 1px solid #e2e8f0;
+}
+
+button[type="submit"] {
     width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 14px;
+    background: #0f172a;
+    color: #ffffff;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     border: none;
-    border-radius: 6px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
 }
 
-button:hover {
-    background-color: #0d5cb1;
+button[type="submit"]:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.4);
 }
 
-/* Responsive */
-@media (max-width: 650px) {
-    form {
-        padding: 20px;
-    }
+/* =============== CV LAYOUT =============== */
 
-    textarea {
-        font-size: 14px;
-    }
-}
-
-
-/* ===============CV================== */
-.cvContainer{
-    display:none;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #eee8e8;
+.cvContainer {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .cv-content {
     width: 700px;
-    margin: 10px auto;
-    background: white;
+    height: fit-content;
+    background: #ffffff;
     display: flex;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .left-section {
-    width: 30%;
-    background: #122d47;
-    color: rgb(247, 247, 247);
-    padding: 30px;
+    width: 34%;
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 35px 22px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
+.profileImage {
+    width: 110px;
+    height: 110px;
+    border-radius: 24px; 
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 0 auto 25px;
+    background-color: #1e293b;
+}
+
+.left-section .section {
+    margin-bottom: 24px;
+}
+
+.left-section .section h3 {
+    color: #ffffff;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.left-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.left-section ul li {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cvPhone::before,
+#cvEmail::before,
+#cvAddress::before {
+    display: none !important;
+    content: none !important;
+}
+
+.left-section ul li::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #94a3b8;
     border-radius: 50%;
-    object-fit:cover;
-    border:2px solid #333;
-    margin: 0 auto 20px;
+    flex-shrink: 0;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.contact-icon {
+    width: 15px;
+    height: 15px;
+    fill: #94a3b8;
+    flex-shrink: 0;
 }
 
-.section {
-    margin-bottom: 25px;
-}
-
-.section h3 {
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-
-/* Right side */
-
-
+/* Main Section Styling */
 .right-section {
-    width: 70%;
-    padding: 30px;
+    width: 66%;
+    padding: 35px 30px;
+    background: #f8fafc; 
+    color: #1e293b;
+    box-sizing: border-box;
+}
+
+/* Unique Name Display Banner */
+#cvName {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 24px 0;
+    padding: 12px 18px;
     background: #ffffff;
-    color: #333;
+    border-radius: 12px;
+    border-left: 5px solid #0f172a; 
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.right-section .section {
+    margin-bottom: 24px;
 }
 
 .right-section h2 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #2c3e50;
-    padding-bottom: 5px;
+    color: #0f172a;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    background-color: #e2e8f0; 
+    border-radius: 8px;
+    display: inline-block;
 }
 
-.item {
-    margin-bottom: 15px;
+.right-section p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0 0 10px 0;
 }
 
-.item span {
-    font-size: 14px;
-    color: gray;
+.right-section ul {
+    padding-left: 18px;
+    margin: 0;
 }
 
-/* Skills Styling */
-
-.skill {
-    margin-bottom: 15px;
+.right-section ul li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 6px;
 }
 
-.skill-bar {
-    width: 100%;
-    background: #ddd;
-    height: 8px;
-    border-radius: 5px;
+.right-section ul li::marker,
+#cvSkills li::marker {
+    color: #334155; 
 }
-
-.skill-fill {
-    height: 8px;
-    border-radius: 5px;
-}
-#ul{
-    list-style-type:disc;
-    padding-left:20px;
-}
-
-.html { width: 90%; background: #e67e22; }
-.css { width: 85%; background: #3498db; }
-.js { width: 75%; background: #f1c40f; }
